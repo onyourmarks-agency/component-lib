@@ -1,10 +1,11 @@
-import type { ComponentLibItems, ComponentLibParameters } from '$lib/_types/component.ts';
+import type { ComponentLibParameters } from '$lib/_types/component.ts';
+import type {TrainingCard} from '$lib/_types/trainingCard.ts';
 
 export type TrainingCardGridParameters = ComponentLibParameters & {
-	items?: ComponentLibItems;
-};
+	items: TrainingCard[];
+}[];
 
-export const TrainingCardGridParameters: TrainingCardGridParameters[] = [
+export const TrainingCardGridParameters: TrainingCardGridParameters = [
 	{
 		name: 'trainingCards',
 		type: 'array',

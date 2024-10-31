@@ -1,10 +1,13 @@
-import type { ComponentLibItems, ComponentLibParameters } from '$lib/_types/component.ts';
+import type {ComponentLibParameters} from '$lib/_types/component.ts';
 
 export type TagListParameters = ComponentLibParameters & {
-	items: ComponentLibItems;
-};
+	items: {
+    title: string;
+    active: boolean;
+  }[];
+}[];
 
-export const TagListParameters: TagListParameters[] = [
+export const TagListParameters: TagListParameters = [
 	{
 		name: 'tagListItems',
 		type: 'array',

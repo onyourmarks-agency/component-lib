@@ -1,10 +1,14 @@
-import type { ComponentLibItems, ComponentLibParameters } from '$lib/_types/component.ts';
+import type { ComponentLibParameters } from '$lib/_types/component.ts';
 
 export type TrainingPropertyListParameters = ComponentLibParameters & {
-	items: ComponentLibItems;
-};
+	items: {
+    title: string;
+    type: string;
+    icon: string;
+  }[];
+}[];
 
-export const TrainingPropertyListParameters: TrainingPropertyListParameters[] = [
+export const TrainingPropertyListParameters: TrainingPropertyListParameters = [
 	{
 		name: 'trainingProperties',
 		type: 'array',

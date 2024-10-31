@@ -1,10 +1,10 @@
-import type { ComponentLibOptions, ComponentLibParameters } from '$lib/_types/component.ts';
+import type {ComponentLibParameters} from '$lib/_types/component.ts';
 
 export type SvgParameters = ComponentLibParameters & {
-	options?: ComponentLibOptions;
-};
+	options?:  string[];
+}[];
 
-export const SvgParameters: SvgParameters[] = [
+export const SvgParameters: SvgParameters = [
 	{
 		name: 'icon',
 		type: 'select',

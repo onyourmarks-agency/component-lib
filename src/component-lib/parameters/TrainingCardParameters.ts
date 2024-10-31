@@ -1,10 +1,18 @@
-import type { ComponentLibItems, ComponentLibParameters } from '$lib/_types/component.ts';
+import type { ComponentLibParameters } from '$lib/_types/component.ts';
 
 export type TrainingCardParameters = ComponentLibParameters & {
-	items?: ComponentLibItems;
-};
+  items?: {
+    title: string;
+    active: boolean;
+  }[] | {
+    title: string;
+    type: string;
+    icon: string;
+  }[]
+}[];
 
-export const TrainingCardParameters: TrainingCardParameters[] = [
+
+export const TrainingCardParameters: TrainingCardParameters = [
 	{
 		name: 'title',
 		type: 'text',
