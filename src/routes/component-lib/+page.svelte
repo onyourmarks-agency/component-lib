@@ -1,6 +1,6 @@
 <script>
-	import ComponentLibItem from '$lib/components/component-lib/ComponentLibItem.svelte';
-  import componentRegistry from '../../component-lib/registry.ts';
+	import ComponentLibItem from '../../component-lib/component/ComponentLibItem.svelte';
+	import componentRegistry from '../../component-lib/registry.ts';
 
 	let searchTerm = '';
 </script>
@@ -12,14 +12,15 @@
 </div>
 
 <div class="lib">
-  {#each componentRegistry as componentRegistryItem}
-    {#if componentRegistryItem.title.toLowerCase().includes(searchTerm.toLowerCase())}
-      <ComponentLibItem
-        title={componentRegistryItem.title}
-        component={componentRegistryItem.component}
-        parameters={componentRegistryItem.parameters}></ComponentLibItem>
-    {/if}
-  {/each}
+	{#each componentRegistry as componentRegistryItem}
+		{#if componentRegistryItem.title.toLowerCase().includes(searchTerm.toLowerCase())}
+			<ComponentLibItem
+				title={componentRegistryItem.title}
+				component={componentRegistryItem.component}
+				parameters={componentRegistryItem.parameters}
+			></ComponentLibItem>
+		{/if}
+	{/each}
 </div>
 
 <style>

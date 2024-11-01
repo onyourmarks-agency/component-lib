@@ -1,11 +1,12 @@
-import type {ComponentLibParameters} from '$lib/_types/component.ts';
+import type { ComponentLibParameters } from '../component/ComponentTypes.ts';
 
-export type TagListParameters = ComponentLibParameters & {
-	items: {
-    title: string;
-    active: boolean;
-  }[];
-}[];
+export type TagListParameters = ComponentLibParameters &
+	{
+		items: {
+			title: string;
+			active: boolean;
+		}[];
+	}[];
 
 export const TagListParameters: TagListParameters = [
 	{
