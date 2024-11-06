@@ -1,6 +1,6 @@
 <script>
 	import 'normalize.css';
-	import '../styles/basics.css';
+	import '$user-styles/basics.css';
 	/**
 	 * @typedef {Object} Props
 	 * @property {import('svelte').Snippet} [children]

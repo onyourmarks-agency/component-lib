@@ -1,5 +1,5 @@
 import { type Component, createRawSnippet, hydrate } from 'svelte';
-import type { ComponentLibParameter } from './ComponentTypes.ts';
+import type { ComponentLibParameter } from './../../types/ComponentTypes.ts';
 
 export function componentToSnippet(Component: Component<never>) {
 	return createRawSnippet((props: () => ComponentLibParameter) => ({

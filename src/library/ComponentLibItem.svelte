@@ -1,9 +1,8 @@
 <script lang="ts">
-	import type { ComponentLibItem, ComponentLibParameter } from './ComponentTypes.ts';
+	import type { ComponentLibItem, ComponentLibParameter } from './../../types/ComponentTypes.ts';
 	import { componentToSnippet } from './ComponentManager.ts';
 
 	let { title, component, parameters = [] }: ComponentLibItem = $props();
-
 	const paramValues = $state({}) as ComponentLibParameter;
 	const paramTextValues: object = {};
 
@@ -62,9 +61,13 @@
 						<textarea
 							bind:value={paramTextValues[param.name]}
 							onchange={() => {
-								try { paramValues[param.name] = JSON.parse(paramTextValues[param.name]) }
-								catch (e) { console.log('not valid JSON') }
-							}}></textarea>
+								try {
+									paramValues[param.name] = JSON.parse(paramTextValues[param.name]);
+								} catch {
+									console.log('not valid JSON');
+								}
+							}}
+						></textarea>
 					{/if}
 				</div>
 			{/each}
