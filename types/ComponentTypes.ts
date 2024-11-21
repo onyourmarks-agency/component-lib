@@ -8,8 +8,9 @@ export type ComponentLibItem = {
 export type ComponentLibParameter = {
 	name: string;
 	type: string;
-	default: string | boolean | null;
+	default?: string | boolean | null;
 	options?: string[];
+	children?: ComponentLibItem[]
 };
 
 export type ComponentLibParameters = ComponentLibParameter[];

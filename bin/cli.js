@@ -14,6 +14,7 @@ const componentLibDir = path.resolve(__dirname, '..');
 // Use the current working directory (the user's project directory)
 const projectDir = process.cwd();
 
+// Symlink lib
 const srcLib = path.resolve(projectDir, 'src/lib');
 const componentLibSrcLib = path.resolve(componentLibDir, 'src/lib');
 try {

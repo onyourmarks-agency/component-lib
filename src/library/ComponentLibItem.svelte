@@ -56,6 +56,11 @@
 						<div>
 							<input type="checkbox" bind:checked={paramValues[param.name]} />
 						</div>
+					{:else if param.type === 'children'}
+						<span>{param.name}:</span>
+<!--						<textarea-->
+<!--							bind:value={paramTextValues[param.name]}-->
+<!--						></textarea>-->
 					{:else if param.type === 'array' && 'items' in param}
 						<span>{param.name}:</span>
 						<textarea
