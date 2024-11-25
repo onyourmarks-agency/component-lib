@@ -1,4 +1,7 @@
 <script>
+  import 'normalize.css';
+  import '$user-styles/basics.css';
+
 	import ComponentLibItem from '../library/ComponentLibItem.svelte';
 	import registry from '$user-config/registry.ts';
 

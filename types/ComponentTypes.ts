@@ -1,4 +1,7 @@
 import type { Component } from 'svelte';
+
+type ComponentLibType = 'select' | 'html' | 'text' | 'check' | 'array' | 'component';
+
 export type ComponentLibItem = {
 	title: string;
 	component: Component<never>;
@@ -7,10 +10,13 @@ export type ComponentLibItem = {
 
 export type ComponentLibParameter = {
 	name: string;
-	type: string;
+	type: ComponentLibType;
 	default?: string | boolean | null;
-	options?: string[];
-	children?: ComponentLibItem[]
+	component?: {
+    title: string;
+    instance: Component<never>;
+  };
+	options?: string[] | object[] | ComponentLibParameter[] | ComponentLibParameter | string;
 };
 
 export type ComponentLibParameters = ComponentLibParameter[];
