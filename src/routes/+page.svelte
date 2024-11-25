@@ -10,7 +10,7 @@
 </script>
 
 <div class="header">
-	<h1 class="title">Showcase</h1>
+	<h1 class="title">OYM - Component Lib</h1>
 
 	<input class="search" type="text" bind:value={searchTerm} placeholder="Find component by Name" />
 </div>
